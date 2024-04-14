@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="form">
+        <label for="income" title="Enter your gross annual income">Enter Gross Annual Income:</label>
+        <div class="input-container">
+            <input type="text" id="income" placeholder="enter gross annual income">
+            <div class="tooltip" id="incomeTooltip">!</div>
+        </div><br>
+
+        <label for="extraincome" title="Enter any extra income from other sources">Enter Extra Income:</label>
+        <div class="input-container">
+            <input type="text" id="extraincome" placeholder="enter extra income from other sources">
+            <div class="tooltip" id="extraIncomeTooltip">!</div>
+        </div><br>
+
+        <label for="age" title="Select your age group">Enter Age Group:</label>
+        <div class="input-container">
+            <select id="age" name="age">
+                <option value="none"> </option>
+                <option value="39"> &lt; 40 </option>
+                <option value="45"> &ge; 40 &amp; &lt; 60 </option>
+                <option value="61"> &ge; 60 </option>
+            </select>
+            <div class="tooltip" id="ageTooltip">!</div>
+        </div><br>
+
+        <label for="deductions" title="Enter total applicable deductions">Enter Total Applicable Deductions:</label>
+        <div class="input-container">
+            <input type="text" id="deductions" placeholder="add total applicable deductions">
+            <div class="tooltip" id="deductionsTooltip">!</div>
+        </div><br>
+
+        <button type="button" id="submitbtn">Submit</button>
+    </form>
+    <div class="container" id="container">
+        <div class="matter">
+            <div id="line1">Your overall income will be</div><br>
+            <div id="tax"></div>
+            <div id="line2"> after tax deductions</div>
+            <button id="btn" type="button">close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
